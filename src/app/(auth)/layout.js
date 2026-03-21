@@ -1,6 +1,5 @@
-import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import "../globals.css";
+import Footer from "../components/Footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -10,9 +9,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-gray-100 text-gray-900 antialiased">
-      <body className="min-h-full flex flex-col">
-        <Navbar />
-        {children}
+      <body className="min-h-screen flex flex-col">
+        <main className="grow">{children}</main>
         <Footer />
       </body>
     </html>

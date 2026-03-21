@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Navbar() {
   return (
     <header className="bg-blue-600 text-white shadow-sm">
@@ -10,14 +11,14 @@ export default function Navbar() {
         </div>
 
         <nav>
-          <ul className="flex items-center gap-3 text-sm font-medium">
+          <ul className="flex items-center gap-3 text-lg font-medium">
             <li>
-              <a
-                href="#"
+              <Link
+                href="/products"
                 className="rounded-md px-3 py-2 transition hover:bg-white/20"
               >
-                Home
-              </a>
+                Products
+              </Link>
             </li>
             <li>
               <a
@@ -42,6 +43,14 @@ export default function Navbar() {
               >
                 Profile
               </a>
+            </li>
+            <li>
+              <Link
+                href="/register"
+                className="rounded-md bg-pink-500 px-3 py-2 transition hover:bg-pink-600"
+              >
+                Sign In
+              </Link>
             </li>
           </ul>
         </nav>
