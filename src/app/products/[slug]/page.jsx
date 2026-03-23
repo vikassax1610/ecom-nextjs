@@ -1,4 +1,4 @@
-import { products } from "@/app/data/products";
+import { products } from "../../data/products";
 import Image from "next/image";
 
 export async function generateMetadata({ params }) {
