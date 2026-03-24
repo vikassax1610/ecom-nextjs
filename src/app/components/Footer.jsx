@@ -10,7 +10,7 @@ export default function Footer() {
         </div>
 
         <nav>
-          <ul className="flex flex-wrap gap-3 text-xs">
+          <ul className="flex flex-wrap gap-3 text-sm">
             <li>
               <a href="#" className="text-slate-300 hover:text-white">
                 Privacy
