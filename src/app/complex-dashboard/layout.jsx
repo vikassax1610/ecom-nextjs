@@ -2,9 +2,11 @@ export default function ComplexDashboardLayout({
   children,
   users,
   revenue,
-  notification, // ⚠️ singular (important)
+  notification,
+  login,
 }) {
-  return (
+  const isLoggedIn = true; // Simulate user authentication status
+  return isLoggedIn ? (
     <>
       <div>{children}</div>
 
@@ -16,8 +18,17 @@ export default function ComplexDashboardLayout({
         </div>
 
         {/* Right Section */}
-        <div className="col-span-2">{notification}</div>
+        <div className="col-span-2 ">{notification}</div>
       </div>
     </>
+  ) : (
+    <div className="flex items-center justify-center h-screen">
+      <div className="bg-white shadow-md rounded-2xl p-6 border w-full max-w-md">
+        <h2 className="text-xl font-semibold mb-4">
+          Please log in to view the dashboard
+        </h2>
+        {login}
+      </div>
+    </div>
   );
 }
