@@ -3,9 +3,7 @@ import { wonderImages } from "../../wonders";
 
 export default async function PhotoModal({ params }) {
   const { id } = await params;
-
   const photo = wonderImages.find((wonder) => wonder.id === id);
-
   if (!photo) return <div>Photo Not Found</div>;
 
   return (
